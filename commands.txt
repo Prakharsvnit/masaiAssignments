@@ -1,0 +1,23 @@
+use assignment;
+db.users.insert({first_name:"Peter",last_name:"Parker","gender":"Male",ip_address:"127.0.0.1",age:"23"});
+db.users.insert({first_name:"Mary",last_name:"Jane","gender":"Female",ip_address:"127.0.0.2",age:"21"});
+db.users.find();
+db.users.insertMany([{"first_name": "Queenie",   "last_name": "McClune",   "gender": "Agender",   "ip_address": "188.199.230.224",   "age": 6 }, 
+{"first_name": "Friedrick",   "last_name": "Jedrzejczak",   "gender": "Genderfluid",   "ip_address": "146.108.227.173",   "age": 49 },
+{"first_name": "Aidan",   "last_name": "Cicci",   "gender": "Male",   "ip_address": "0.138.58.92",   "age": 15 },
+{"first_name": "Eloisa",   "last_name": "Reams",   "gender": "Non-binary",   "ip_address": "11.243.116.190",   "age": 23 },
+{"first_name": "Caty",   "last_name": "Coryndon",   "gender": "Genderqueer",   "ip_address": "86.41.111.168",   "age": 99 },
+{"first_name": "Jessalyn",   "last_name": "Cowherd",   "gender": "Male",   "ip_address": "81.246.231.246",   "age": 32 },
+{"first_name": "Francesco",   "last_name": "Bixley",   "gender": "Polygender",   "ip_address": "125.207.123.43",   "age": 46 },
+{"first_name": "Elijah",   "last_name": "Murdy",   "gender": "Non-binary",   "ip_address": "191.199.237.53",   "age": 81 }]);
+db.users.findOne();
+db.users.update({"first_name":"Peter"},{$set:{"gender":"Male"});
+db.users.update({"first_name":"Mary"},{$set:{"gender":"Female","age":21}});
+db.users.find({"first_name":"Peter"});
+db.users.findOne({"first_name":"Mary"});
+db.users.update({"first_name":"Peter"},{$set:{"gender":"Male","age":23}});
+db.users.updateMany({"first_name": "Queenie"},{$set:{"gender": "Male","age":11}});
+db.users.remove({"first_name":"Elijah"});
+db.users.deleteOne({"first_name":"Francesco"});
+db.users.deleteMany({"first_name":"Peter"});
+db.dropDatabase()

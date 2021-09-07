@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import  Combined  from "./components/Combined"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+      <Combined ButtonName={"JOIN US"} ButtonColor={"red"}/>   
+      <Combined ButtonName={"SETTINGS"} ButtonColor={"blue"}/>
+      </div>
+   <div>
+   <Combined ButtonName={"LOGIN"} ButtonColor={"green"}/>   
+   <Combined ButtonName={"CONTACT US"} ButtonColor={"orange"}/>
+   </div>
+   <div>
+   <Combined ButtonName={"SEARCH"} ButtonColor={"Violet"}/>   
+   <Combined ButtonName={"HELP"} ButtonColor={"Grey"}/> 
+   </div>
+    <div>
+    <Combined ButtonName={"HOME"} ButtonColor={"brown"}/>   
+    <Combined ButtonName={"DOWNLOAD"} ButtonColor={"yellow"}/> 
     </div>
+    <hr />
+    <h2>Mobile Operating System</h2>
+    <ul>
+      <li>Android</li>
+      <li>BlackBerry</li>
+      <li>iPhone</li>
+      <li>Windows Phone</li>
+    </ul>
+    <h2>Mobile Manufacturers</h2>
+    <ul>
+      <li>Samsung</li>
+      <li>HTC</li>
+      <li>Micromax</li>
+      <li>Apple</li>
+    </ul>
+    </div>
+    
   );
 }
 

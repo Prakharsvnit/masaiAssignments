@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +37,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.gridBox{
+  display:grid;
+  grid-gap:20px;
+  grid-template-columns: repeat(3,300px);
+  margin-left: 400px;
+  
+}
+
+.card{
+  text-align:center;
+}
+
+.heading{
+  text-align:center;
 }

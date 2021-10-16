@@ -4,6 +4,7 @@ import "../App.css"
 const Card = ({data1}) => {
     const [number, setNumber]= useState(1);
     const [productPrice,setProductPrice] = useState(data1.Price);
+    const [description,setDescription] = useState(false);
 
     const handleAdd=()=>{
     setNumber(number+1)
@@ -25,6 +26,11 @@ const Card = ({data1}) => {
                 <div className="qty_box" style={{float:'left'}}>{number}</div>
                 <button className="qty_box" style={{float:'left'}} onClick={handleAdd}>+</button>
             </div>
+            {(number > 2) && <button>Add to cart</button>}
+            <div onClick={() => setDescription(true)} style={{float:"right",color:"black"}}>more...</div>
+            {
+                description ? <p>{data1.description}</p> : null
+            }
         </div>
 
     )

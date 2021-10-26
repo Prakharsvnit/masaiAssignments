@@ -10,7 +10,7 @@ const Dashboard = () => {
             
         </div>
             <div style={{ display: "flex", justifyContent:"center", gap:"20px"}}>
-           <img src="https://cdn-icons-png.flaticon.com/512/556/556130.png" alt="" style={{height:"100px"}} /> <h1>Your token is { token}</h1>
+            <h1>Your token is { token}</h1>
         </div>
         
         </div>
